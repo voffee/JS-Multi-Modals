@@ -58,3 +58,7 @@ button {
     font-style: normal;
     font-size: 24px;
 }
+
+dialog::backdrop {
+    background: hsla(50, 100%, 50%, 0.7);
+}
