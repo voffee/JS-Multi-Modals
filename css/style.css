@@ -45,6 +45,10 @@ button {
     color: #FFF;
 }
 
+button:hover {
+    cursor: pointer;
+}
+
 .lato-small {
     font-family: "Lato", sans-serif;
     font-weight: 400;
@@ -59,11 +63,7 @@ button {
     font-size: 24px;
 }
 
-dialog::backdrop {
-    background: hsla(50, 100%, 50%, 0.7);
-}
-
-dialog {
+.modal {
     position: fixed;
     top: 50%;
     left: 50%;
@@ -71,10 +71,18 @@ dialog {
 
     height: 200px;
     width: 200px;
-    border: solid 5px #FCF;
+    border: solid 5px #F9629F;
+    border-radius: 5px;
     padding: 1rem;
 }
 
-.modal-container {
-   
+
+.modal[open]::backdrop {
+    animation: backdrop-fade-in 0.5s ease forwards;
+}
+
+/* Animations */
+@keyframes backdrop-fade-in {
+    from {background: transparent}
+    to {background: hsla(50, 100%, 50%, 0.7);}
 }
