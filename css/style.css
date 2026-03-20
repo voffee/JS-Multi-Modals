@@ -69,11 +69,23 @@ button:hover {
     left: 50%;
     transform: translate(-50%, -50%);
 
-    height: 200px;
-    width: 200px;
+    min-height: 200px;
+    min-width: 200px;
+
+    max-height: 500px;
+    max-width: 500px;
     border: solid 5px #F9629F;
     border-radius: 5px;
     padding: 1rem;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.modal:not([open]) {
+    display: none;
 }
 
 
